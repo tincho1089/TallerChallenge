@@ -19,7 +19,8 @@ The following command will install and start both microfrontends developed in Re
 
 ![Docker Services](/images/docker.png?raw=true "Docker Services")
 
-This is the final result of the services that you should see if everything works as expected.
+This is the final result of the services that you should see if everything works as expected. To access the main application you can do it through:
+`http://localhost:3010/`
 
 ## Architectural Choices
 - **Microfrontend Architecture:** The application is divided into two microfrontends to demonstrate modular design. MFE1 serves as the main container, while MFE2 handles the Todo List functionality.
