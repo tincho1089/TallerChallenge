@@ -1,0 +1,26 @@
+version: '3.8'
+
+services:
+  mfe1:
+    build:
+      context: ./mfe1
+      dockerfile: Dockerfile
+    restart: always
+    ports:
+      - "3010:3010"
+    volumes:
+      - ./mfe1:/app
+      - /svr/app/mfe1_node_modules:/app/node_modules
+    command: npm run start
+
+  mfe2:
+    build:
+      context: ./mfe2
+      dockerfile: Dockerfile
+    restart: always
+    ports:
+      - "3011:3011"
+    volumes:
+      - ./mfe2:/app
+      - /svr/app/mfe2_node_modules:/app/node_modules
+    command: npm run start
